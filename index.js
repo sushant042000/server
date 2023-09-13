@@ -13,7 +13,10 @@ const port= process.env.PORT ;
 
 const users=[{}];
 
-app.use(cors());
+app.use(cors({
+    origin: 'https://socket-io-server-xbiu.vercel.app/',
+}));
+
 app.get("/",(req,res)=>{
     res.send("HELL ITS WORKING");
 })
